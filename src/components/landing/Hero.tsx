@@ -19,9 +19,6 @@ export const Hero = () => {
 
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">
               Source verified seafood producers.
-              <span className="block text-foreground/70">
-                On terms suppliers actually accept.
-              </span>
             </h1>
 
             <p className="mt-5 max-w-2xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg">
