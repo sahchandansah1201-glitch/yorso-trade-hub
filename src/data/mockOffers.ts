@@ -13,6 +13,8 @@ export type AnonymousOffer = {
   country: string;
   /** Anonymous public label, e.g. "Verified Vietnamese pangasius producer". */
   anonymousLabel: string;
+  /** Product photo. Generic, anonymized — never reveals supplier branding. */
+  image: string;
   /** Month + year of the most recent verification review. */
   verifiedSince: string;
   /** Year the supplier joined YORSO. */
@@ -30,12 +32,20 @@ export type AnonymousOffer = {
   updated: string;
 };
 
+import pangasiusImg from "@/assets/products/pangasius-fillets.jpg";
+import salmonImg from "@/assets/products/salmon-hog.jpg";
+import shrimpImg from "@/assets/products/shrimp-vannamei.jpg";
+import codImg from "@/assets/products/cod-loins.jpg";
+import squidImg from "@/assets/products/squid-tubes.jpg";
+import crabImg from "@/assets/products/king-crab-clusters.jpg";
+
 export const LIVE_OFFERS: AnonymousOffer[] = [
   {
     id: "off-vn-pang-001",
     flag: "🇻🇳",
     country: "Vietnam",
     anonymousLabel: "Verified Vietnamese pangasius producer",
+    image: pangasiusImg,
     verifiedSince: "Mar 2025",
     onPlatformSince: 2022,
     certifications: ["HACCP", "BRC AA", "ASC", "IFS"],
