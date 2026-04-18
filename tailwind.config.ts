@@ -57,6 +57,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        verified: {
+          DEFAULT: "hsl(var(--verified))",
+          soft: "hsl(var(--verified-soft))",
+        },
+        warn: {
+          soft: "hsl(var(--warn-soft))",
+          fg: "hsl(var(--warn-fg))",
+        },
+        chip: "hsl(var(--chip))",
+      },
+      fontFamily: {
+        sans: [
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Inter",
+          "sans-serif",
+        ],
+        display: ['"Fraunces"', '"Source Serif Pro"', "Georgia", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
