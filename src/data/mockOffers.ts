@@ -13,6 +13,8 @@ export type AnonymousOffer = {
   country: string;
   /** Anonymous public label, e.g. "Verified Vietnamese pangasius producer". */
   anonymousLabel: string;
+  /** Product photo. Generic, anonymized — never reveals supplier branding. */
+  image: string;
   /** Month + year of the most recent verification review. */
   verifiedSince: string;
   /** Year the supplier joined YORSO. */
@@ -30,12 +32,20 @@ export type AnonymousOffer = {
   updated: string;
 };
 
+import pangasiusImg from "@/assets/products/pangasius-fillets.jpg";
+import salmonImg from "@/assets/products/salmon-hog.jpg";
+import shrimpImg from "@/assets/products/shrimp-vannamei.jpg";
+import codImg from "@/assets/products/cod-loins.jpg";
+import squidImg from "@/assets/products/squid-tubes.jpg";
+import crabImg from "@/assets/products/king-crab-clusters.jpg";
+
 export const LIVE_OFFERS: AnonymousOffer[] = [
   {
     id: "off-vn-pang-001",
     flag: "🇻🇳",
     country: "Vietnam",
     anonymousLabel: "Verified Vietnamese pangasius producer",
+    image: pangasiusImg,
     verifiedSince: "Mar 2025",
     onPlatformSince: 2022,
     certifications: ["HACCP", "BRC AA", "ASC", "IFS"],
@@ -53,6 +63,7 @@ export const LIVE_OFFERS: AnonymousOffer[] = [
     flag: "🇳🇴",
     country: "Norway",
     anonymousLabel: "Verified Norwegian Atlantic salmon producer",
+    image: salmonImg,
     verifiedSince: "Feb 2025",
     onPlatformSince: 2021,
     certifications: ["HACCP", "BRC AA", "ASC", "MSC"],
@@ -70,6 +81,7 @@ export const LIVE_OFFERS: AnonymousOffer[] = [
     flag: "🇪🇨",
     country: "Ecuador",
     anonymousLabel: "Verified Ecuadorian whiteleg shrimp producer",
+    image: shrimpImg,
     verifiedSince: "Jan 2025",
     onPlatformSince: 2020,
     certifications: ["HACCP", "BAP 4★", "ASC", "BRC A"],
@@ -87,6 +99,7 @@ export const LIVE_OFFERS: AnonymousOffer[] = [
     flag: "🇮🇸",
     country: "Iceland",
     anonymousLabel: "Verified Icelandic cod producer",
+    image: codImg,
     verifiedSince: "Mar 2025",
     onPlatformSince: 2019,
     certifications: ["HACCP", "MSC", "IFS"],
@@ -104,6 +117,7 @@ export const LIVE_OFFERS: AnonymousOffer[] = [
     flag: "🇵🇪",
     country: "Peru",
     anonymousLabel: "Verified Peruvian giant squid producer",
+    image: squidImg,
     verifiedSince: "Feb 2025",
     onPlatformSince: 2022,
     certifications: ["HACCP", "BRC A", "Friend of the Sea"],
@@ -121,6 +135,7 @@ export const LIVE_OFFERS: AnonymousOffer[] = [
     flag: "🇷🇺",
     country: "Russia",
     anonymousLabel: "Verified Russian king crab producer",
+    image: crabImg,
     verifiedSince: "Jan 2025",
     onPlatformSince: 2021,
     certifications: ["HACCP", "MSC"],

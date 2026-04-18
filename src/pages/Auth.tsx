@@ -31,10 +31,16 @@ const Auth = () => {
     [intent],
   );
 
+  const [notice, setNotice] = useState<string | null>(null);
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     track("auth_submit", { intent });
-    // Backend not wired yet — placeholder until Cloud auth is enabled.
+    setNotice(
+      intent === "register"
+        ? "Thanks — your intent is recorded. Account creation is not yet wired to a backend; we will reach out once registration is live."
+        : "Sign-in is not yet wired to a backend. We are rolling out the auth backend in the next build block.",
+    );
   };
 
   return (
@@ -109,8 +115,14 @@ const Auth = () => {
               </div>
 
               <Button type="submit" className="h-11 w-full text-base">
-                {intent === "register" ? "Create buyer account" : "Sign in"}
+                {intent === "register" ? "Submit registration intent" : "Submit sign-in intent"}
               </Button>
+
+              {notice && (
+                <div className="rounded-lg border border-border bg-secondary px-3 py-2 text-xs text-foreground">
+                  {notice}
+                </div>
+              )}
 
               <p className="text-center text-xs text-muted-foreground">
                 {intent === "register" ? (
@@ -161,8 +173,9 @@ const Auth = () => {
               </li>
             </ul>
             <p className="text-[11px] leading-relaxed text-muted-foreground">
-              Backend wiring is part of an upcoming build block. This page captures intent so the
-              flow is real, not an in-page anchor.
+              Heads up: account creation is not wired to a backend yet. This page captures intent
+              so the flow is real — full registration and the supplier-approval loop are part of
+              an upcoming build block.
             </p>
           </aside>
         </div>

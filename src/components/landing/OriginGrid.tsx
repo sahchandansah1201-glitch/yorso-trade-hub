@@ -1,6 +1,5 @@
 import { ORIGIN_COUNTRIES } from "@/i18n/translations";
 import { SectionHeader } from "./LiveOffers";
-import { track } from "@/lib/analytics";
 
 export const OriginGrid = () => {
   return (
@@ -9,15 +8,13 @@ export const OriginGrid = () => {
         <SectionHeader
           eyebrow="Suppliers by origin"
           title="Curated origin coverage"
-          sub="A selected subset of key origin countries on the homepage. Full origin directory is rolling out."
+          sub="A selected subset of key origin countries on the homepage. Origin-level browsing pages are rolling out."
         />
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {ORIGIN_COUNTRIES.map((c) => (
-            <a
+            <div
               key={c.code}
-              href={`#origin-${c.code.toLowerCase()}`}
-              onClick={() => track("origin_country_click", { country: c.code })}
-              className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 transition-colors hover:border-accent"
+              className="flex items-center gap-3 rounded-xl border border-border bg-card p-4"
             >
               <span className="text-2xl leading-none">{c.flag}</span>
               <div className="min-w-0">
@@ -26,10 +23,11 @@ export const OriginGrid = () => {
                   {c.producers} verified · {c.species.join(" · ")}
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
 };
+
