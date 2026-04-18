@@ -25,9 +25,7 @@ export const Hero = () => {
             </h1>
 
             <p className="mt-5 max-w-2xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg">
-              A supplier-controlled access platform for serious buyers. Browse indicative market
-              offers from verified producers, then request price access — the supplier decides when
-              to share commercial terms. Supplier company names stay protected.
+              Platform for professional buyers.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
