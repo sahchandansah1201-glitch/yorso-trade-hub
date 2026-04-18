@@ -23,11 +23,11 @@ export const FinalCTA = () => {
               asChild
               onClick={() => track("final_cta_register_click")}
             >
-              <a href="#register">Create buyer account</a>
+              <a href="/auth?intent=register">Create buyer account</a>
             </Button>
             {TRADE_DESK_LIVE && (
               <Button size="lg" variant="outline" className="h-12 px-7 text-base" asChild>
-                <a href="#trade-desk">Talk to trade desk</a>
+                <a href="/contact/trade-desk">Talk to trade desk</a>
               </Button>
             )}
           </div>

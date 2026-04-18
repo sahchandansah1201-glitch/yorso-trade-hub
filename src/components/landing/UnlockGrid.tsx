@@ -44,7 +44,7 @@ export const UnlockGrid = () => {
             asChild
             onClick={() => track("hero_cta_register_click", { source_section: "unlock" })}
           >
-            <a href="#register">Create buyer account</a>
+            <a href="/auth?intent=register">Create buyer account</a>
           </Button>
           <p className="text-xs text-muted-foreground">
             Free to register · No hidden broker commission · Supplier decides commercial access

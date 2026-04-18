@@ -36,14 +36,14 @@ export const StickyNav = () => {
 
         <div className="hidden items-center gap-2 lg:flex">
           <Button variant="ghost" size="sm" asChild>
-            <a href="#signin">Sign in</a>
+            <a href="/auth?intent=signin">Sign in</a>
           </Button>
           <Button
             size="sm"
             asChild
             onClick={() => track("hero_cta_register_click", { source_section: "stickynav" })}
           >
-            <a href="#register">Create buyer account</a>
+            <a href="/auth?intent=register">Create buyer account</a>
           </Button>
         </div>
 
@@ -71,10 +71,10 @@ export const StickyNav = () => {
             ))}
             <div className="mt-2 flex gap-2">
               <Button variant="outline" size="sm" className="flex-1" asChild>
-                <a href="#signin">Sign in</a>
+                <a href="/auth?intent=signin">Sign in</a>
               </Button>
               <Button size="sm" className="flex-1" asChild>
-                <a href="#register">Register</a>
+                <a href="/auth?intent=register">Register</a>
               </Button>
             </div>
           </div>
