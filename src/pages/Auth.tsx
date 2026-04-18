@@ -161,8 +161,9 @@ const Auth = () => {
               </li>
             </ul>
             <p className="text-[11px] leading-relaxed text-muted-foreground">
-              Backend wiring is part of an upcoming build block. This page captures intent so the
-              flow is real, not an in-page anchor.
+              Heads up: account creation is not wired to a backend yet. This page captures intent
+              so the flow is real — full registration and the supplier-approval loop are part of
+              an upcoming build block.
             </p>
           </aside>
         </div>
