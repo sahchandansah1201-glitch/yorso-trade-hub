@@ -22,15 +22,15 @@ export const Footer = () => {
           <div className="text-sm font-semibold">For suppliers</div>
           <ul className="mt-3 space-y-2 text-sm text-primary-foreground/70">
             <li><a href="#suppliers" className="hover:text-primary-foreground">Why YORSO</a></li>
-            <li><a href="#suppliers" className="hover:text-primary-foreground">Apply as supplier</a></li>
+            <li><a href="/suppliers/apply" className="hover:text-primary-foreground">Apply as supplier</a></li>
           </ul>
         </div>
         <div>
           <div className="text-sm font-semibold">Company</div>
           <ul className="mt-3 space-y-2 text-sm text-primary-foreground/70">
             <li><a href="#faq" className="hover:text-primary-foreground">FAQ</a></li>
-            <li><a href="#" className="hover:text-primary-foreground">Terms</a></li>
-            <li><a href="#" className="hover:text-primary-foreground">Privacy</a></li>
+            <li><a href="/terms" className="hover:text-primary-foreground">Terms</a></li>
+            <li><a href="/privacy" className="hover:text-primary-foreground">Privacy</a></li>
           </ul>
         </div>
       </div>

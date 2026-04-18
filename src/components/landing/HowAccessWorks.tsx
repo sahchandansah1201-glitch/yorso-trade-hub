@@ -40,7 +40,7 @@ export const HowAccessWorks = () => {
             asChild
             onClick={() => track("hero_cta_register_click", { source_section: "how-access" })}
           >
-            <a href="#register">Create buyer account</a>
+            <a href="/auth?intent=register">Create buyer account</a>
           </Button>
           <Button size="lg" variant="outline" asChild>
             <a href="#verification">See verification methodology</a>

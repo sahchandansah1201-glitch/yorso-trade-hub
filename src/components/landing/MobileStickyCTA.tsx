@@ -31,7 +31,7 @@ export const MobileStickyCTA = () => {
         asChild
         onClick={() => track("mobile_sticky_cta_click")}
       >
-        <a href="#register">Create buyer account</a>
+        <a href="/auth?intent=register">Create buyer account</a>
       </Button>
     </div>
   );

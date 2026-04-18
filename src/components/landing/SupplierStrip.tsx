@@ -24,7 +24,7 @@ export const SupplierStrip = () => {
             asChild
             onClick={() => track("supplier_apply_click")}
           >
-            <a href="#apply-supplier">Apply as supplier</a>
+            <a href="/suppliers/apply">Apply as supplier</a>
           </Button>
         </div>
         <ul className="grid gap-4 lg:col-span-7 lg:grid-cols-3">

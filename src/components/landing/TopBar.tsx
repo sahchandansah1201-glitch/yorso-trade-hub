@@ -11,11 +11,11 @@ export const TopBar = () => {
           <span className="opacity-70">Verified producers · Identity protected at all stages</span>
         </div>
         <div className="flex items-center gap-4">
-          <a href="#signin" className="hover:opacity-80">
+          <a href="/auth?intent=signin" className="hover:opacity-80">
             Sign in
           </a>
           <a
-            href="#register"
+            href="/auth?intent=register"
             className="rounded-sm bg-accent px-2 py-0.5 font-medium text-accent-foreground hover:opacity-90"
           >
             Register

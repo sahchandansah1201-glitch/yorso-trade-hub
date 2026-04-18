@@ -112,10 +112,12 @@ export const OfferCard = ({ offer }: Props) => {
             track("live_offer_request_price_click", { offer_id: offer.id })
           }
         >
-          <a href="#register">Request price access</a>
+          <a href={`/auth?intent=register&from=offer&id=${encodeURIComponent(offer.id)}`}>
+            Request price access
+          </a>
         </Button>
         <p className="text-[11px] leading-snug text-muted-foreground">
-          Currently routes to registration. Supplier-approval workflow rolling out
+          Today this opens registration. Full supplier-approval flow is rolling out
           <span className="ml-1 rounded bg-warn-soft px-1 py-px text-[10px] font-medium text-warn-fg">
             future workflow
           </span>
