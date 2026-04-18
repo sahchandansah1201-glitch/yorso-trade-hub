@@ -74,7 +74,7 @@ export const HOW_ACCESS_STEPS = [
   {
     n: 3,
     title: "Request price access",
-    body: "Send a price-access request to the supplier on a specific offer. The request is delivered; supplier reviews your buyer profile and decides.",
+    body: "Send a price-access request on a specific offer. Today this captures your intent through registration. The full supplier-review and approval loop is the next workflow we are rolling out.",
     future: false,
   },
   {

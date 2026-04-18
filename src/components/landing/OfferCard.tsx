@@ -40,25 +40,33 @@ export const OfferCard = ({ offer }: Props) => {
       ref={ref}
       className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
     >
-      <header className="border-b border-border p-5">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-              <span className="text-base leading-none">{offer.flag}</span>
-              <span>{offer.country}</span>
-            </div>
-            <h3 className="mt-1.5 font-display text-lg font-semibold leading-snug">
-              {offer.anonymousLabel}
-            </h3>
-          </div>
-          <Badge
-            variant="secondary"
-            className="shrink-0 gap-1 bg-verified-soft text-[hsl(var(--verified))] hover:bg-verified-soft"
-          >
-            <ShieldCheck className="h-3 w-3" />
-            Verified
-          </Badge>
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-secondary">
+        <img
+          src={offer.image}
+          alt={`${offer.product} — ${offer.spec}`}
+          loading="lazy"
+          width={800}
+          height={500}
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/40 to-transparent" />
+        <Badge
+          variant="secondary"
+          className="absolute right-3 top-3 gap-1 bg-verified-soft text-[hsl(var(--verified))] hover:bg-verified-soft"
+        >
+          <ShieldCheck className="h-3 w-3" />
+          Verified
+        </Badge>
+        <div className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-background/85 px-2 py-1 text-[11px] font-medium uppercase tracking-wider backdrop-blur">
+          <span className="text-sm leading-none">{offer.flag}</span>
+          <span>{offer.country}</span>
         </div>
+      </div>
+
+      <header className="border-b border-border p-5">
+        <h3 className="font-display text-lg font-semibold leading-snug">
+          {offer.anonymousLabel}
+        </h3>
         <div className="mt-2 flex items-center gap-1.5 text-[11px] text-muted-foreground">
           <Lock className="h-3 w-3" />
           Identity protected · Verified {offer.verifiedSince} · On YORSO since {offer.onPlatformSince}
@@ -117,7 +125,8 @@ export const OfferCard = ({ offer }: Props) => {
           </a>
         </Button>
         <p className="text-[11px] leading-snug text-muted-foreground">
-          Today this opens registration. Full supplier-approval flow is rolling out
+          Today this opens registration and captures your request. The supplier-approval loop —
+          where the supplier reviews and opens real price, communication and documents — is rolling out
           <span className="ml-1 rounded bg-warn-soft px-1 py-px text-[10px] font-medium text-warn-fg">
             future workflow
           </span>
