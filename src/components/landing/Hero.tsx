@@ -118,11 +118,7 @@ const HeroVisual = () => {
         />
         {/* Subtle gradient to deepen contrast for overlays */}
         <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, hsl(var(--hero-deep) / 0.0) 40%, hsl(var(--hero-deep) / 0.55) 100%)",
-          }}
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-foreground/40"
           aria-hidden
         />
 
