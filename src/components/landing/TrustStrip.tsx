@@ -1,4 +1,4 @@
-import { TRUST_AUTHORITIES } from "@/content/home";
+import { TRUST_AUTHORITIES } from "@/i18n/translations";
 
 export const TrustStrip = () => {
   return (

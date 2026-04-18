@@ -1,4 +1,4 @@
-import { LIVE_OFFERS } from "@/content/home";
+import { LIVE_OFFERS } from "@/i18n/translations";
 import { OfferCard } from "./OfferCard";
 
 export const LiveOffers = () => {

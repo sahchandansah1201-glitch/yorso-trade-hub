@@ -1,4 +1,4 @@
-import { CATEGORIES } from "@/content/home";
+import { CATEGORIES } from "@/i18n/translations";
 import { SectionHeader } from "./LiveOffers";
 import { track } from "@/lib/analytics";
 import { ArrowUpRight } from "lucide-react";

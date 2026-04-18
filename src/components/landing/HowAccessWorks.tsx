@@ -1,4 +1,4 @@
-import { HOW_ACCESS_STEPS } from "@/content/home";
+import { HOW_ACCESS_STEPS } from "@/i18n/translations";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "./LiveOffers";
 import { track } from "@/lib/analytics";

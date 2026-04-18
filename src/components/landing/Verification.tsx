@@ -1,4 +1,4 @@
-import { VERIFICATION_STEPS } from "@/content/home";
+import { VERIFICATION_STEPS } from "@/i18n/translations";
 import { SectionHeader } from "./LiveOffers";
 import { ShieldCheck } from "lucide-react";
 import { track } from "@/lib/analytics";

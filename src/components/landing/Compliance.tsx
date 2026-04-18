@@ -1,4 +1,4 @@
-import { COMPLIANCE_DOCS } from "@/content/home";
+import { COMPLIANCE_DOCS } from "@/i18n/translations";
 import { SectionHeader } from "./LiveOffers";
 import { FileText } from "lucide-react";
 import { track } from "@/lib/analytics";

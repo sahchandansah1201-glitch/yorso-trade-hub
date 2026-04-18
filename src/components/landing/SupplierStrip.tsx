@@ -1,4 +1,4 @@
-import { SUPPLIER_VALUE } from "@/content/home";
+import { SUPPLIER_VALUE } from "@/i18n/translations";
 import { Button } from "@/components/ui/button";
 import { track } from "@/lib/analytics";
 
