@@ -1,4 +1,4 @@
-import { ORIGIN_COUNTRIES } from "@/content/home";
+import { ORIGIN_COUNTRIES } from "@/i18n/translations";
 import { SectionHeader } from "./LiveOffers";
 import { track } from "@/lib/analytics";
 

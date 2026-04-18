@@ -1,7 +1,7 @@
 import { Search, ShieldCheck, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { KPI } from "@/content/home";
+import { KPI } from "@/i18n/translations";
 import { track } from "@/lib/analytics";
 
 const formatNum = (n: number) => n.toLocaleString("en-US");

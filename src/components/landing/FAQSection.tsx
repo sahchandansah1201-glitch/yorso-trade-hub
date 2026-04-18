@@ -1,4 +1,4 @@
-import { FAQ } from "@/content/home";
+import { FAQ } from "@/i18n/translations";
 import { SectionHeader } from "./LiveOffers";
 import {
   Accordion,

@@ -1,4 +1,4 @@
-import { UNLOCK_ITEMS } from "@/content/home";
+import { UNLOCK_ITEMS } from "@/i18n/translations";
 import { SectionHeader } from "./LiveOffers";
 import { Button } from "@/components/ui/button";
 import { Check, Lock, Sparkles } from "lucide-react";

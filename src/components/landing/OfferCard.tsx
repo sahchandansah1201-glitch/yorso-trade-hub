@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Lock, ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import type { AnonymousOffer } from "@/content/home";
+import type { AnonymousOffer } from "@/i18n/translations";
 import { track } from "@/lib/analytics";
 
 interface Props {
