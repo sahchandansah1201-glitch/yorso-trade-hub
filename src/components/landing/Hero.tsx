@@ -1,6 +1,5 @@
-import { Search, ShieldCheck, Lock } from "lucide-react";
+import { ShieldCheck, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { KPI } from "@/i18n/translations";
 import { track } from "@/lib/analytics";
 import heroImage from "@/assets/hero-crab-harvest.jpg";
@@ -8,18 +7,6 @@ import heroImage from "@/assets/hero-crab-harvest.jpg";
 const formatNum = (n: number) => n.toLocaleString("en-US");
 
 export const Hero = () => {
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    track("hero_search_submit", {
-      species: String(data.get("species") || ""),
-      origin: "",
-      cert: "",
-    });
-    const q = encodeURIComponent(String(data.get("species") || ""));
-    window.location.hash = `#offers${q ? `?q=${q}` : ""}`;
-  };
-
   return (
     <section id="top" className="bg-hero-deep">
       <div className="container-yorso py-14 lg:py-24">
@@ -43,30 +30,14 @@ export const Hero = () => {
               to share commercial terms. Supplier company names stay protected.
             </p>
 
-            <form
-              onSubmit={onSubmit}
-              className="mt-7 flex max-w-xl items-center gap-2 rounded-xl border border-border bg-card p-1.5 shadow-sm"
-            >
-              <Search className="ml-2 h-4 w-4 text-muted-foreground" />
-              <Input
-                name="species"
-                placeholder="Search species, e.g. pangasius, salmon, vannamei…"
-                className="h-11 border-0 shadow-none focus-visible:ring-0"
-                aria-label="Search species"
-              />
-              <Button type="submit" className="h-11 px-5">
-                Search
-              </Button>
-            </form>
-
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button
                 size="lg"
                 className="h-12 px-6 text-base"
                 asChild
                 onClick={() => track("hero_cta_register_click", { source_section: "hero" })}
               >
-                <a href="#register">Create buyer account</a>
+                <a href="/auth?intent=register">Create buyer account</a>
               </Button>
               <Button
                 size="lg"
